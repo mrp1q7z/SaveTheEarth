@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Plant trees</string>
+    <string name="admob_id">ca-app-pub-4623298212622664/3911393437</string>
+    <string name="opening_message">Now, green is lost rapidly from the earth.Will also be the 12.85 million acres (*1) in the year scale (It is bigger than the area of MA and NJ). Green disappears from the earth in this state, you will end up with a red-brown earth.</string>
+    <string name="opening_message2">By the power of you, please revive the green earth of this red brown.\n\n(*1)Net loss area, Food and Agriculture Organization of the United Nations, From the Global Forest Resources Assessment 2010</string>
+    <string name="action_reset">Start from the beginning</string>
+    <string name="action_show_ending">See the ending</string>
+    <string name="play_message">Tap earnestly the earth that was reddish!</string>
+    <string name="count_message">Tree was growing %d</string>
+    <string name="start">Start</string>
+
+    <string name="ending_message_01">Thank you</string>
+    <string name="ending_message_02">4.5 billion years (Earth) since the birth of my</string>
+    <string name="ending_message_03">There was also when I was up in flames</string>
+    <string name="ending_message_04">There was also when I was icebound</string>
+    <string name="ending_message_05">There was also when there was a huge organism covered with green</string>
+    <string name="ending_message_06">Strange organisms that humans came out</string>
+    <string name="ending_message_07">(If you ask them) that civilization made ​​a thing of pride</string>
+    <string name="ending_message_08">Their desire dug up earth forever</string>
+    <string name="ending_message_09">I took one and the green</string>
+    <string name="ending_message_10">And, no longer nobody Become a ground that has reddish</string>
+    <string name="ending_message_11">But green was restored by the power of your</string>
+    <string name="ending_message_12">Organisms will also be born in this</string>
+    <string name="ending_message_13">10,000 years later, "super human beings" was born</string>
+    <string name="ending_message_14">End</string>
+
+</resources>

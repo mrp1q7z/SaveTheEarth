@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ひたすら植林</string>
+    <string name="admob_id">ca-app-pub-4623298212622664/3911393437</string>
+    <string name="opening_message">今、地球上から緑がどんどん失われています。その規模は、年間で520万ha（東京都の24倍）にもなります(*1)。このままでは地球上から緑が消え、赤茶色の大地となってしまいます。</string>
+    <string name="opening_message2">あなたの力で、この赤茶色の大地に緑を復活させてください。\n\n(*1)国際連合食料農業機関 世界森林資源評価2010より 純消失面積</string>
+    <string name="action_reset">最初から始める</string>
+    <string name="action_show_ending">エンディングを見る</string>
+    <string name="play_message">赤茶けた大地をひたすらタップ！</string>
+    <string name="count_message">木が %d 本生えました</string>
+    <string name="start">Start</string>
+
+    <string name="ending_message_01">ありがとう</string>
+    <string name="ending_message_02">私（地球）が誕生してから４５億年</string>
+    <string name="ending_message_03">炎に包まれていたときもあった</string>
+    <string name="ending_message_04">氷に閉ざされていた時もあった</string>
+    <string name="ending_message_05">緑に覆われ巨大な生物がいた時もあった</string>
+    <string name="ending_message_06">人間という変な生物が出てきた</string>
+    <string name="ending_message_07">文明という（彼らに言わせれば）ご自慢のものを作った</string>
+    <string name="ending_message_08">彼らの欲望は果てしなく大地を掘り起こし</string>
+    <string name="ending_message_09">緑も奪った</string>
+    <string name="ending_message_10">そして、赤茶けた大地になって誰もいなくなった</string>
+    <string name="ending_message_11">が、あなたの力によって緑が復活した</string>
+    <string name="ending_message_12">これで生物も生まれてくるだろう</string>
+    <string name="ending_message_13">１万年後、「超人類」が生まれた</string>
+    <string name="ending_message_14">終わり</string>
+
+</resources>
