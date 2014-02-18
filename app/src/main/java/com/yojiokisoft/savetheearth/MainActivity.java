@@ -1,7 +1,9 @@
 package com.yojiokisoft.savetheearth;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,12 +26,14 @@ import static android.view.animation.Animation.*;
  */
 public class MainActivity extends Activity implements TouchView.Callback, AdListener {
     private int mMaxTrees;
+    private Vibrator mVibrator = null;
     private AlphaAnimation mAnimation;
     private TextView mMessage;
     private TouchView mEarthImage;
     private AdView mAdViewBanner;
     private FrameLayout mEnding;
     private TextView mEndingMessage;
+    private MediaPlayer mPlayer = null;
     private ImageView mForeImage;
     private ImageView mBackImage;
     private int mImageIndex;
@@ -70,6 +74,10 @@ public class MainActivity extends Activity implements TouchView.Callback, AdList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mVibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        mPlayer = MediaPlayer.create(this, R.raw.ending_music);
+        mPlayer.setLooping(true);
 
         mMessage = (TextView) findViewById(R.id.message_text);
         mEarthImage = (TouchView) findViewById(R.id.earth_image);
@@ -115,6 +123,9 @@ public class MainActivity extends Activity implements TouchView.Callback, AdList
     }
 
     private void startGame() {
+        if (mPlayer != null && mPlayer.isPlaying()) {
+            mPlayer.pause();
+        }
         if (mAnimation != null) {
             mAnimation.cancel();
             mAnimation = null;
@@ -125,6 +136,14 @@ public class MainActivity extends Activity implements TouchView.Callback, AdList
     }
 
     private void showEnding() {
+        if (mPlayer != null) {
+            if (mPlayer.isPlaying()) {
+                mPlayer.pause();
+                mPlayer.seekTo(0);
+            }
+            mPlayer.start();
+        }
+
         mEarthImage.setVisibility(View.INVISIBLE);
 
         if (mAnimation != null) {
@@ -149,6 +168,7 @@ public class MainActivity extends Activity implements TouchView.Callback, AdList
         } else {
             String msg = String.format(getString(R.string.count_message, treeCount));
             mMessage.setText(msg);
+            mVibrator.vibrate(600);
         }
 
         if (treeCount > mMaxTrees) {
@@ -219,6 +239,10 @@ public class MainActivity extends Activity implements TouchView.Callback, AdList
     @Override
     protected void onPause() {
         super.onPause();
+        if (mPlayer != null) {
+            mPlayer.release();
+            mPlayer = null;
+        }
         mEarthImage.save();
     }
 
