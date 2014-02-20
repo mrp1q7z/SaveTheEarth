@@ -168,7 +168,7 @@ public class MainActivity extends Activity implements TouchView.Callback, AdList
         } else {
             String msg = String.format(getString(R.string.count_message, treeCount));
             mMessage.setText(msg);
-            mVibrator.vibrate(600);
+            mVibrator.vibrate(60);
         }
 
         if (treeCount > mMaxTrees) {
